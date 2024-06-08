@@ -1,0 +1,15 @@
+{% extends "tasks/layout.html" %}
+
+{% block mybody %}
+
+    <h1>Add Tasks</h1>
+    
+    <form action="{% url 'tasks:add2' %}" method="post">
+        {% csrf_token %}
+        <!-- <input type="text" name="task">  -->
+        <!-- Use the django form -->
+        {{ myfrom }}
+        <input type="submit">
+    </form>
+    <a href="{% url 'tasks:index2' %}">Back to list</a>
+{% endblock %}
