@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 # create a global  variable to  store the the task list
-# tasks = ["foo", "bar", "bza"]
+tasks = ["foo", "bar", "bza"]
 
 class NewTaskForm(forms.Form):
     task = forms.CharField(label="New Task")
