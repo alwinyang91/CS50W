@@ -10,18 +10,24 @@
 
         function count() {
             counter += 1;
-            // or counter++;
-            // or counter = counter + 1;
-
-            // display an alert with the value of counter
-            alert(counter);
+            document.querySelector("#myH1").innerHTML = counter;
         }
+        // the addEventListener has two arguments, one is the event, and the second is the function to be called
+        document.addEventListener("DOMContentLoaded", function() {
+            // function count() can be also sent to an element
+            document.querySelector("button").onclick = count;
+            // equivalent to
+            // document.querySelector("button").addEventListener("click", count);
+
+            // run the count function every 1000 milliseconds
+            setInterval(count, 1000);
+        });
     </script>
 </head>
 <body>
-    <h1>Hello!</h1>
+    <h1 id="myH1">0</h1>
 
-    <button onclick="count()">
+    <button>
         Count!
     </button>
 

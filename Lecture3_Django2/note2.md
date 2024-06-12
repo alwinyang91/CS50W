@@ -7,7 +7,7 @@ cd Lecture3_Django2
 cd mysite
 ```
 
-- Create an application named `hello`
+- Create an application named `newyear`
 ```dash
 python manage.py startapp newyear
 ```

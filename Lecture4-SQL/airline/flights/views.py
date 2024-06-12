@@ -26,4 +26,4 @@ def book(request, flight_id):
         passenger_id = int(request.POST["passenger"])
         passenger = Passenger.objects.get(pk=passenger_id)
         passenger.flights.add(flight)
-        return HttpResponseRedirect(reverse("flight", args=(flight.id)))
+        return HttpResponseRedirect(reverse("flights:flight", args=(flight.id,)))

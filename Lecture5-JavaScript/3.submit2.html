@@ -9,18 +9,29 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        document.querySelector("#boot").onsubmit = function(event) {
+        document.querySelector("form").onsubmit = function(event) {
           event.preventDefault(); // Prevent form submission
           const name = document.querySelector('#name').value;
-          const heading = document.querySelector('#baat');
+          const heading = document.querySelector('#firstH1');
           heading.innerHTML = `Hello, ${name}!`;
         };
       });
     </script>
+    <!-- This doesn't work:  -->
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector("form").onsubmit = function() {
+          const name = document.querySelector('#name').value;
+          const heading = document.querySelector('#firstH1');
+          heading.innerHTML = `Hello, ${name}!`;
+        };
+      });
+    </script> -->
+    
   </head>
   <body>
-    <h1 id="baat">Hello!</h1>
-    <form id="boot">
+    <h1 id="firstH1">Hello!</h1>
+    <form>
       <input autofocus type="text" id="name" placeholder="Name">
       <input type="submit">
     </form>
