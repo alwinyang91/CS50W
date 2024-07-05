@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Single Page</title>
+        <style>
+        </style>
+        <script>
+
+            window.onpopstate = function(event) {
+                console.log(event.state.section_his);
+                showSection(event.state.section_his);
+            }
+
+            function showSection(section_num) {
+                fetch(`/sections/${section_num}`)
+                .then(response => response.text())
+                .then(text => {
+                    console.log(text);
+                    document.querySelector('#content').innerHTML = text;
+                });
+
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('button').forEach(button => {
+                    button.onclick = function() {
+                        // the const scction will be = 1,2,3 
+                        // dataset.section, because data-section 
+                        const section_num = this.dataset.section;
+                        // {section_his: section_num} is the javascript object for event.state saving
+                        history.pushState({section_his: section_num}, "", `section${section_num}`);
+                        showSection(section_num);
+                    };
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <button data-section="1">Section 1</button>
+        <button data-section="2">Section 2</button>
+        <button data-section="3">Section 3</button>
+        <div id="content">
+        </div>
+    </body>
+</html>

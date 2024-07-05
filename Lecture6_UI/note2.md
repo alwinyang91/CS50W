@@ -3,21 +3,25 @@
 ---
 # 1. Single Page Applications
 
-## 1.1 With all HTML elements
-e.g., `single_page.html`
+---
+## 1.3 With Multiple Routes and Browser History
+It turns out there's a way in JavaScript to manipulate that URL,
+taking advantage of what's known as the JavaScript history API, 
+where I can push something to the history, 
+meaning update the URL and actually save that inside the user's browser history so later on,
+they could potentially go back to that.
 
-## 1.2 With Multiple Routes
-e.g., singlepage1
+e.g., singlepage2
 
 - Create a Django project
 ```zsh
 cd Lecture6_UI
-django-admin startproject singlepage1
+django-admin startproject singlepage2
 ```
 
 - Create an application
 ```zsh
-cd singlepage1
+cd singlepage2
 python manage.py startapp singlepage
 cd ..
 ```
@@ -66,7 +70,7 @@ def section(request, num):
 
 - Create a URLconf for view paths to `singlepage/urls.py`
 ```zsh
-cd singlepage1/singlepage
+cd singlepage2/singlepage
 touch urls.py
 cd ..
 ```
@@ -81,6 +85,8 @@ urlpatterns = [
     path("sections/<int:num>", views.section, name="section")
 ]
 ```
+
+
 
 - create a `template` folder with the application `singlepage` folder with `index.html`
 ```dash
@@ -97,7 +103,7 @@ cd ..
 
 - run application
 ```zsh
-cd singlepage1
+cd singlepage2
 python manage.py runserver
 ```
 
