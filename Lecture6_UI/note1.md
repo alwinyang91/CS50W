@@ -3,6 +3,7 @@
 ---
 # 1. Single Page Applications
 
+---
 ## 1.1 With all HTML elements
 e.g., `single_page.html`
 
@@ -94,6 +95,8 @@ cd ..
 cd ..
 cd ..
 ```
+
+- write `index.html`
 
 - run application
 ```zsh

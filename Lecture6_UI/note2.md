@@ -86,10 +86,8 @@ urlpatterns = [
 ]
 ```
 
-
-
 - create a `template` folder with the application `singlepage` folder with `index.html`
-```dash
+```zsh
 cd singlepage
 mkdir templates
 cd templates
@@ -101,16 +99,13 @@ cd ..
 cd ..
 ```
 
+- write `index.html`
+
 - run application
 ```zsh
 cd singlepage2
 python manage.py runserver
 ```
-
-- try
-http://127.0.0.1:8000/sections/1
-
-Then you can see the api information of each section
 
 - visit http://127.0.0.1:8000 
 
