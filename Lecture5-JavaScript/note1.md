@@ -2,7 +2,7 @@
 ---
 ---
 # 0. First JavaScript
-#### Put script into the `head` section, the javascript will run automatically
+#### Put script into the `<head>` section, the javascript will run automatically
 
 E.g., `1.hello.html`
 ```html

@@ -50,7 +50,7 @@ mysite/
 ---
 ---
 # 2. Create an application
-- try:
+- try admin:
 ```dash
 cd mysite
 python manage.py runserver 
