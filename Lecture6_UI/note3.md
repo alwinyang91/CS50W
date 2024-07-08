@@ -11,7 +11,6 @@ e.g., `scroll.html`
 Check if the window is scrolled to the bottom of the document
 ```html
 <script>
-
     window.onscroll = () => {
 
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
@@ -21,13 +20,12 @@ Check if the window is scrolled to the bottom of the document
         }
 
     };
-
 </script>
 ```
 
 ---
 ---
-# 3. Infinite Scroll
+# 3. Infinite Scroll Page
 e.g., scroll
 
 - Create a Django project
@@ -116,9 +114,8 @@ def posts(request):
     })
 ```
 
-
 - create a `template` folder with the application `scroll` folder with `index.html`
-```dash
+```zsh
 cd scroll/posts
 mkdir templates
 cd templates
